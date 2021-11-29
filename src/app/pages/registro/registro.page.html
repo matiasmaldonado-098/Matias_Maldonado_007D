@@ -1,0 +1,150 @@
+<ion-header class="ion-no-border" >
+  <ion-toolbar background color="danger">
+    <ion-buttons slot="start">
+      <ion-button color="primary">
+        
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" >
+      <ion-button background color="tertiary" routerLink="/iniciosesion" >Login</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content background color="danger">
+  <div id="header2">
+  <img src="/assets/registro.gif" />
+</div>
+<div id="header">
+    
+  <img src="/assets/zero-two-ok.gif" />
+  
+</div>
+
+<form #formulario="ngForm" (ngSubmit) ="onSubmit()">
+  <ion-list-header>
+
+    
+
+  </ion-list-header>
+  <ion-item background color="danger">
+    <ion-label position="floating">Nombre y apellido Completo</ion-label>
+  <ion-input  type="text" name="nombre" [(ngModel)]= "usuario.nombre"></ion-input>
+</ion-item>
+    <ion-item background color="danger">
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input  type="text"  name="nombreusuario" [(ngModel)]= "usuario.nombreusuario"></ion-input>
+      
+    </ion-item>
+    <ion-item background color="danger">
+      <ion-label position="floating">correo electronico</ion-label>
+    <ion-input  type="email"  name="email" [(ngModel)]= "usuario.email"
+     pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"required></ion-input>
+
+    </ion-item>
+    <ion-item background color="danger">
+      <ion-label position="floating" >contraseña</ion-label>
+    <ion-input type="password"  background color="success" name="password" [(ngModel)]= "usuario.password" required></ion-input>
+    </ion-item>
+    <ion-item background color="danger"> 
+      <ion-label>Mes Nacimiento</ion-label>
+     
+      <ion-select name="mesnacimiento" [(ngModel)]= "usuario.mesnacimiento" [interfaceOptions]="customAlertOptions" interface="alert"  placeholder="Select One">
+        <ion-select-option value="Enero">Enero</ion-select-option>
+        <ion-select-option value="Febrero">Febrero</ion-select-option>
+        <ion-select-option value="Marzo">Marzo</ion-select-option>
+        <ion-select-option value="Abril">Abril</ion-select-option>
+        <ion-select-option value="Mayo">Mayo</ion-select-option>
+        <ion-select-option value="Junio">Junio</ion-select-option>
+        <ion-select-option value="Julio">Julio</ion-select-option>
+        <ion-select-option value="pineapple">Agosto</ion-select-option>
+        <ion-select-option value="sausage">Septiembre</ion-select-option>
+        <ion-select-option value="Spinach">Octubre</ion-select-option>
+        <ion-select-option value="Spinach">Noviembre</ion-select-option>
+        <ion-select-option value="Spinach">Diciembre</ion-select-option>
+      </ion-select>
+      
+    </ion-item>
+    <ion-item background color="danger"> 
+      <ion-label>Año Nacimiento</ion-label>
+      
+      <ion-select name="anhonacimiento" [(ngModel)]= "usuario.anhonacimiento" [interfaceOptions]="customAlertOptions" interface="alert"  placeholder="Select One">
+        <ion-select-option value="2021">2021</ion-select-option>
+        <ion-select-option value="2020">2020</ion-select-option>
+        <ion-select-option value="2019">2019</ion-select-option>
+        <ion-select-option value="2018">2018</ion-select-option>
+        <ion-select-option value="2017">2017</ion-select-option>
+        <ion-select-option value="2016">2016</ion-select-option>
+        <ion-select-option value="2015">2015</ion-select-option>
+        <ion-select-option value="2014">2014</ion-select-option>
+        <ion-select-option value="2013">2013</ion-select-option>
+        <ion-select-option value="2012">2012</ion-select-option>
+        <ion-select-option value="2011">2011</ion-select-option>
+        <ion-select-option value="2010">2010</ion-select-option>
+        <ion-select-option value="2009">2009</ion-select-option>
+        <ion-select-option value="2008">2008</ion-select-option>
+        <ion-select-option value="2007">2007</ion-select-option>
+        <ion-select-option value="2006">2006</ion-select-option>
+        <ion-select-option value="2005">2005</ion-select-option>
+        <ion-select-option value="2004">2004</ion-select-option>
+        <ion-select-option value="2003">2003</ion-select-option>
+        <ion-select-option value="2002">2002</ion-select-option>
+        <ion-select-option value="2001">2001</ion-select-option>
+        <ion-select-option value="2000">2000</ion-select-option>
+        <ion-select-option value="1999">1999</ion-select-option>
+        <ion-select-option value="1998">1998</ion-select-option>
+        <ion-select-option value="1997">1997</ion-select-option>
+        <ion-select-option value="1996">1996</ion-select-option>
+        <ion-select-option value="1995">1995</ion-select-option>
+        <ion-select-option value="1994">1994</ion-select-option>
+        <ion-select-option value="1993">1993</ion-select-option>
+        <ion-select-option value="1992">1992</ion-select-option>
+        <ion-select-option value="2021">1991</ion-select-option>
+        <ion-select-option value="2020">1990</ion-select-option>
+        <ion-select-option value="2019">1989</ion-select-option>
+        <ion-select-option value="2018">1988</ion-select-option>
+        <ion-select-option value="2017">1987</ion-select-option>
+        <ion-select-option value="2016">1986</ion-select-option>
+        <ion-select-option value="2015">1985</ion-select-option>
+        <ion-select-option value="2014">1984</ion-select-option>
+        <ion-select-option value="2013">1983</ion-select-option>
+        <ion-select-option value="2012">1982</ion-select-option>
+        <ion-select-option value="2011">1981</ion-select-option>
+        <ion-select-option value="2010">1980</ion-select-option>
+        <ion-select-option value="2009">1979</ion-select-option>
+        <ion-select-option value="2008">1978</ion-select-option>
+        <ion-select-option value="2007">1977</ion-select-option>
+        <ion-select-option value="2006">1976</ion-select-option>
+        <ion-select-option value="2005">1975</ion-select-option>
+        <ion-select-option value="2004">1974</ion-select-option>
+        <ion-select-option value="2003">1973</ion-select-option>
+        <ion-select-option value="2002">1972</ion-select-option>
+        <ion-select-option value="2001">1971</ion-select-option>
+        <ion-select-option value="2000">1970</ion-select-option>
+        <ion-select-option value="1999">1969</ion-select-option>
+        <ion-select-option value="1998">1968</ion-select-option>
+        <ion-select-option value="1997">1967</ion-select-option>
+        <ion-select-option value="1996">1966</ion-select-option>
+        <ion-select-option value="1995">1965</ion-select-option>
+        <ion-select-option value="1994">1964</ion-select-option>
+        <ion-select-option value="1993">1963</ion-select-option>
+        <ion-select-option value="1992">1962</ion-select-option>
+        <ion-select-option value="1994">1961</ion-select-option>
+        <ion-select-option value="1993">1960</ion-select-option>
+        
+      </ion-select>
+      
+    </ion-item>
+    <ion-button [disabled] ="formulario.invalid"
+
+              type="submit" expand="block" routerLink="/tabs/inicio" shape="round" fill="outline">
+
+        Registro
+
+      </ion-button>
+    </form>
+    <ion-button shape="round" fill="outline" expand="block" routerLink="/tabs/inicio">Registro 
+      <ion-icon name="logo-google"></ion-icon>
+    </ion-button>
+  
+</ion-content>

@@ -1,0 +1,64 @@
+<ion-header style="margin-top: auto;" >
+  <ion-toolbar background color="danger" >
+      
+    <ion-avatar slot="end" routerLink="/iniciosesion" >
+      <img src="/assets/zero-two-ok.gif"  >
+    </ion-avatar>
+    <ion-button background color="danger" slot="start"  >
+      <ion-icon name="cart-outline"></ion-icon>
+    </ion-button>
+  
+  <ion-title style="text-align: center;">Galeria</ion-title>
+</ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  
+  
+  <ion-slides [options]="option" >
+    <ion-slide>
+  <ion-card style="background-color: rgba(0, 238, 255, 0.404);" class="ion-padding" class="padding" >
+    <ion-card-header>
+      
+      <ion-card-title style="text-align: left;" style="font-size: 19px;">Himouto Umaru-cha</ion-card-title>
+    </ion-card-header>
+
+    
+    <img src="/assets/himouto3.jpg" class="ion-padding" routerLink="/tabs/himouto-umaru-cha">
+    
+  </ion-card>
+</ion-slide>
+<ion-slide>
+  <ion-card  style="background-color: rgba(0, 238, 255, 0.322);" class="ion-padding" class="padding" >
+    <ion-card-header>
+      
+      <ion-card-title style="text-align: left;">Re zero</ion-card-title>
+    </ion-card-header>
+    <img src="/assets/rezero202.jpg" class="ion-padding" routerLink="/tabs/re">
+    
+  </ion-card>
+</ion-slide>
+<ion-slide>
+  <ion-card style="background-color: rgba(0, 238, 255, 0.404);" class="ion-padding"  class="padding">
+    <ion-card-header>
+      
+      <ion-card-title style="text-align: left;" style="font-size: 20px;">The Rising Of The Shield Hero</ion-card-title>
+    </ion-card-header>
+    <img src="/assets/naofumi3.jpg" class="ion-padding" routerLink="/tabs/the-rising-of-the-shield-hero">
+    
+  </ion-card>
+</ion-slide>
+
+
+<ion-slide>
+  <ion-card style="background-color: rgba(0, 238, 255, 0.404);" class="ion-padding"  class="padding">
+    <ion-card-header>
+      
+      <ion-card-title style="text-align: left;" style="font-size: 20px;">darling in the franxx</ion-card-title>
+    </ion-card-header>
+    <img src="/assets/darling in the franxx.png" class="ion-padding" routerLink="/tabs/darling-in-the-franxx">
+    
+  </ion-card>
+</ion-slide>
+</ion-slides>
+</ion-content>

@@ -1,0 +1,59 @@
+<ion-header class="ion-no-border" >
+  <ion-toolbar background color="danger">
+    <ion-buttons slot="start">
+      <ion-button color="primary">
+        
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" >
+      <ion-button background color="tertiary" routerLink="/registro" >Registro</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <div id="header2">
+  <img src="/assets/login.gif" />
+</div>
+  <div id="header">
+    
+    <img src="/assets/zero-two-ok.gif" />
+    
+  </div>
+  
+
+
+  <form #formulario="ngForm" (ngSubmit) ="onSubmit()">
+    <ion-list-header>
+
+      
+  
+    </ion-list-header>
+
+    
+
+    <ion-item class="item">
+      <ion-label position="floating">correo electronico</ion-label>
+    <ion-input  type="email"  name="email" [(ngModel)]= "usuario.email"
+     pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"required></ion-input>
+
+    </ion-item>
+    <ion-item class="item">
+      <ion-label position="floating" >contraseña</ion-label>
+    <ion-input type="password"  background color="success" name="password" [(ngModel)]= "usuario.password" required></ion-input>
+    </ion-item>
+    
+    <ion-button [disabled] ="formulario.invalid"
+
+              type="submit" expand="block" routerLink="/tabs/inicio" shape="round" fill="outline">
+
+        Registro
+
+      </ion-button>
+    </form>
+    <ion-button shape="round" fill="outline" expand="block" routerLink="/tabs/inicio">Login 
+      <ion-icon name="logo-google"></ion-icon>
+    </ion-button>
+  
+  
+</ion-content>
